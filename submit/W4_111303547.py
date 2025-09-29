@@ -58,7 +58,9 @@ def save_results(df, output_file_path):
     """任務五：儲存為 CSV"""
     
     # TODO 5.1: 儲存 CSV，避免中文亂碼
-    df.to_csv('grades_analyzed.csv', index=True, encoding='utf-8-sig')
+    output_file_path = Path(output_file_path)
+    output_file_path.parent.mkdir(parents=True, exist_ok=True)  # 保險起見
+    df.to_csv(output_file_path, index=False, encoding='utf-8-sig')
 
 if __name__ == "__main__":
     INPUT_CSV = "grades.csv"
