@@ -4,6 +4,7 @@ Pandas 基礎操作課堂練習：學生期中成績分析
 """
 
 import pandas as pd
+from pathlib import Path
 
 def load_and_explore_data(file_path):
     """任務一：讀取 CSV 並初步探索資料"""
